@@ -46,6 +46,7 @@ def fortune():
 def weather():
     """Return a weather-info dictionary for this zipcode."""
 
+    # req.args...is a dictionary of key value pairs .get frinds value that matches the passed in key
     zipcode = request.args.get('zipcode')
     weather_info = WEATHER.get(zipcode, DEFAULT_WEATHER)
     return jsonify(weather_info)
